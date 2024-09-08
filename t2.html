@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Switcher</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      direction: ltr;
+    }
+
+    .rtl {
+      direction: rtl;
+    }
+
+    .container {
+      margin: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('ar')">عربي</button>
+    <div id="content">
+      <p id="welcome-message">Welcome to the language switcher page!</p>
+    </div>
+  </div>
+
+  <script>
+    function setLanguage(language) {
+      const content = document.getElementById('content');
+      const message = document.getElementById('welcome-message');
+
+      if (language === 'ar') {
+        document.body.classList.add('rtl');
+        message.textContent = 'مرحبا بك في صفحة تغيير اللغة!';
+      } else {
+        document.body.classList.remove('rtl');
+        message.textContent = 'Welcome to the language switcher page!';
+      }
+    }
+  </script>
+</body>
+
+</html>
