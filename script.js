@@ -1,3 +1,34 @@
+/***** randome *****/
+function shuffleElements() {
+  const colums = document.getElementById('colum1');
+  const card = Array.from(colums.children);
+  const shuffledcard = card.sort(() => Math.random() - 0.5);
+  
+  // تفريغ المحتوى الأصلي
+  colums.innerHTML = '';
+
+  // إعادة إضافة العناصر بشكل عشوائي
+  shuffledcard.forEach(card => {
+    colums.appendChild(card);
+  });
+}
+
+function shuffleElements() {
+  const colums = document.getElementById('colum2');
+  const card = Array.from(colums.children);
+  const shuffledcard = card.sort(() => Math.random() - 0.5);
+  
+  // تفريغ المحتوى الأصلي
+  colums.innerHTML = '';
+
+  // إعادة إضافة العناصر بشكل عشوائي
+  shuffledcard.forEach(card => {
+    colums.appendChild(card);
+  });
+}
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
   const parentElement = document.querySelector('.parent');
 
