@@ -1,10 +1,10 @@
 /***** Random shuffle function *****/
 function shuffleElements() {
-  // اختيار جميع الأعمدة التي تحتوي على class "column"
+class "column"
   const columns = document.querySelectorAll('.column');
   
-  // تطبيق العملية على كل عمود بشكل مستقل
-  columns.forEach(column => {
+// تطبيق العملية على كل عمود بشكل مستقل
+columns.forEach(column => {
     const cards = Array.from(column.querySelectorAll('.card')); // اختيار جميع البطاقات داخل العمود
     const shuffledCards = cards.sort(() => Math.random() - 0.5); // ترتيب عشوائي للبطاقات
 
