@@ -1,38 +1,25 @@
-/***** randome *****/
+/***** Random shuffle function *****/
 function shuffleElements() {
-  const colums = document.getElementById('column1');
-  const card = Array.from(colums.children);
-  const shuffledcard = card.sort(() => Math.random() - 0.5);
+  // اختيار جميع الأعمدة التي تحتوي على class "column"
+  const columns = document.querySelectorAll('.column');
   
-  // تفريغ المحتوى الأصلي
-  colums.innerHTML = '';
+  // تطبيق العملية على كل عمود بشكل مستقل
+  columns.forEach(column => {
+    const cards = Array.from(column.querySelectorAll('.card')); // اختيار جميع البطاقات داخل العمود
+    const shuffledCards = cards.sort(() => Math.random() - 0.5); // ترتيب عشوائي للبطاقات
 
-  // إعادة إضافة العناصر بشكل عشوائي
-  shuffledcard.forEach(card => {
-    colums.appendChild(card);
-  });
-}
+    // تفريغ محتوى العمود الأصلي
+    column.innerHTML = '';
 
-
-  // إعادة إضافة العناصر بشكل عشوائي
-  shuffledcard.forEach(card => {
-    colums.appendChild(card);
-  });
-}
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const parentElement = document.querySelector('.parent');
-
-  if (parentElement) {
-    parentElement.addEventListener('click', (event) => {
-      if (event.target.classList.contains('photo')) {
-        console.log('hi');
-      }
+    // إعادة إضافة البطاقات بشكل عشوائي
+    shuffledCards.forEach(card => {
+      column.appendChild(card);
     });
-  }
-});
+  });
+}
+
+// استدعاء الدالة عند تحميل الصفحة
+window.onload = shuffleElements;
 
 /***** popup *****/
 let popup = document.getElementById('popup');
