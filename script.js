@@ -1,10 +1,10 @@
 /***** Random shuffle function *****/
 function shuffleElements() {
-class "column"
+  // اختيار جميع الأعمدة التي تحتوي على class "column"
   const columns = document.querySelectorAll('.column');
   
-// تطبيق العملية على كل عمود بشكل مستقل
-columns.forEach(column => {
+  // تطبيق العملية على كل عمود بشكل مستقل
+  columns.forEach(column => {
     const cards = Array.from(column.querySelectorAll('.card')); // اختيار جميع البطاقات داخل العمود
     const shuffledCards = cards.sort(() => Math.random() - 0.5); // ترتيب عشوائي للبطاقات
 
@@ -41,7 +41,7 @@ const setLanguage = (language) => {
       report: 'Report this post',
       settings: 'Settings',
       privacy: 'Privacy',
-      darkMode: 'Dark Mode',all: 'All',
+      darkMode: 'Dark Mode', all: 'All',
       notification: 'Notification',
       about: 'About'
     },
@@ -64,9 +64,10 @@ const setLanguage = (language) => {
     a.textContent = content[language].settings;
   });
 
-document.querySelectorAll('.all h3').forEach(h3 => {
-  h3.textContent = content[language].all;
-});
+  document.querySelectorAll('.all h3').forEach(h3 => {
+    h3.textContent = content[language].all;
+  });
+
   // تحديث نصوص محتوى القائمة
   document.querySelectorAll('.scontent a').forEach((a, index) => {
     if (index === 0) a.textContent = content[language].darkMode;
