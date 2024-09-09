@@ -13,13 +13,6 @@ function shuffleElements() {
   });
 }
 
-function shuffleElements() {
-  const colums = document.getElementById('column2');
-  const card = Array.from(colums.children);
-  const shuffledcard = card.sort(() => Math.random() - 0.5);
-  
-  // تفريغ المحتوى الأصلي
-  colums.innerHTML = '';
 
   // إعادة إضافة العناصر بشكل عشوائي
   shuffledcard.forEach(card => {
