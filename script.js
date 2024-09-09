@@ -1,6 +1,6 @@
 /***** randome *****/
 function shuffleElements() {
-  const colums = document.getElementById('colum1');
+  const colums = document.getElementById('column1');
   const card = Array.from(colums.children);
   const shuffledcard = card.sort(() => Math.random() - 0.5);
   
@@ -14,7 +14,7 @@ function shuffleElements() {
 }
 
 function shuffleElements() {
-  const colums = document.getElementById('colum2');
+  const colums = document.getElementById('column2');
   const card = Array.from(colums.children);
   const shuffledcard = card.sort(() => Math.random() - 0.5);
   
